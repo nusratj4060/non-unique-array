@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title> 
+        JavaScript  
+      | Get all non-unique values. 
+    </title> 
+</head> 
+  
+<body style="text-align:center;" id="body"> 
+    <h1 style="color:green;">   
+           Non-Unique
+        </h1> 
+    <p id="GFG_UP" style="font-size: 16px;"> 
+  
+    </p> 
+    <button onclick="gfg_Run()"> 
+        click here 
+    </button> 
+    <p id="GFG_DOWN" style="color:green;  
+                            font-size: 20px;  
+                            font-weight: bold;"> 
+    </p> 
+    <script> 
+        var el_up = document.getElementById("GFG_UP"); 
+        var el_down = document.getElementById("GFG_DOWN"); 
+        var arr = [3,3,99,52,99,83,62]; 
+        var sort_arr = arr.slice().sort(); 
+        var res = []; 
+        el_up.innerHTML = "Original Array = [" + arr + "]";; 
+  
+        function gfg_Run() { 
+            for (var i = 0; i < sort_arr.length - 1; i++) { 
+                if (sort_arr[i + 1] == sort_arr[i]) { 
+                    res.push(sort_arr[i]); 
+                } 
+            } 
+            el_down.innerHTML = "Non-Unique values are = " + res; 
+        } 
+    </script> 
+</body> 
+  
+</html> 
